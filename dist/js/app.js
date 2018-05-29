@@ -149,7 +149,7 @@ function addMarker(sub, parent) {
         var markIcon = new L.divIcon({
             title: element.name,
             className: "test",
-            html: '<svg fill="' + color + '" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="41px" height="41px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve">' + '<path d="M242.606,0C142.124,0,60.651,81.473,60.651,181.955c0,40.928,13.504,78.659,36.31,109.075l145.646,194.183L388.252,291.03   c22.808-30.416,36.31-68.146,36.31-109.075C424.562,81.473,343.089,0,242.606,0z M242.606,303.257   c-66.989,0-121.302-54.311-121.302-121.302c0-66.989,54.313-121.304,121.302-121.304c66.991,0,121.302,54.315,121.302,121.304   C363.908,248.947,309.598,303.257,242.606,303.257z">' + '</path>' + '<image class="marker-icon" href="/dist/img/' + sub.icon + '"  height="200" width="200" x="140" y="80"/>' + '</svg>'
+            html: '<svg fill="' + color + '" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="41px" height="41px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve">' + '<path d="M242.606,0C142.124,0,60.651,81.473,60.651,181.955c0,40.928,13.504,78.659,36.31,109.075l145.646,194.183L388.252,291.03   c22.808-30.416,36.31-68.146,36.31-109.075C424.562,81.473,343.089,0,242.606,0z M242.606,303.257   c-66.989,0-121.302-54.311-121.302-121.302c0-66.989,54.313-121.304,121.302-121.304c66.991,0,121.302,54.315,121.302,121.304   C363.908,248.947,309.598,303.257,242.606,303.257z">' + '</path>' + '<image class="marker-icon" href="./dist/img/' + sub.icon + '"  height="200" width="200" x="140" y="80"/>' + '</svg>'
         });
 
         var lat = element.lat;
@@ -169,7 +169,7 @@ function addMarker(sub, parent) {
 function createIcon(sub) {
     var icon = document.createElement('img');
     icon.setAttribute("class", "sub-icon");
-    icon.setAttribute("src", "/dist/img/" + sub.icon);
+    icon.setAttribute("src", "./dist/img/" + sub.icon);
     return icon;
 }
 

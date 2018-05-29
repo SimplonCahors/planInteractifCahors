@@ -60,7 +60,7 @@ a:link, a:focus, a:active {
   .sidenav .user-view {
     z-index: 1;
     height: 160px;
-    background-image: url("/dist/img/ville_de_cahors.jpg");
+    background-image: url("./../img/ville_de_cahors.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top; }
