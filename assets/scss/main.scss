@@ -1,0 +1,158 @@
+$main-color: #14589F;
+
+html {
+    font-size: 14px;
+}
+
+a:link,a:focus,a:active {
+    outline: none;
+}
+
+#mapid {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidenav-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sidenav-btn {
+    position: relative;
+    display: block;
+    padding: 20px 0 0 0;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    background-color: $main-color;
+    color: #FFF;
+    width: 50px;
+    height: 100px;
+    border:none;
+    transition:0.5s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow: hidden;
+
+    i {
+        font-size: 50px;
+    }
+
+    &:hover {
+        background-color: lighten($main-color, 10%);
+        transition: ease-in-out 0.5s;
+    }
+
+    &:focus {
+        background-color: darken($main-color, 10%);
+        transition: ease-in-out 0.5s;
+    }
+}
+
+.sidenav-trigger {
+    position: relative;
+    z-index: 1001;
+}
+
+.sidenav {
+    z-index: 1002;
+    width: 285px;
+    overflow: inherit;
+
+    @media screen and (max-width:640px) {
+        width: 100%;
+    }
+
+    .sidenav-close {
+        display: none;
+        float: left;
+        z-index: 2;
+        margin-left: -50px;
+
+        @media screen and (max-width:640px) {
+            margin-left: 0;
+            padding: 20px 0 0 0;
+            border-radius: 0 0 4px 0;
+        }
+    }
+
+    .user-view {
+        z-index: 1;
+        height: 160px;
+        background-image: url('/dist/img/ville_de_cahors.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+
+        @media screen and (max-width:640px) {
+            height: 100px;
+        }
+    }
+
+    .collapsible-header {
+        text-transform: capitalize;
+
+        .down {
+            display: block;
+        }
+
+        .up {
+            display: none;
+        }
+    }
+
+    .active .collapsible-header {
+        .down {
+            display: none;
+        }
+
+        .up {
+            display: block;
+        }
+    }
+
+    .collapsible-body li {
+        text-align: center;
+
+        a {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content:flex-start;
+            align-items: center;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .sub-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5%;
+        }
+    }
+    
+    .loading {
+        text-align: center;
+        color: #999;
+    }
+}
+
+.sidenav-overlay {
+    display: none !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1010;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 1em;
+    font-size: 13px;
+    @media screen and (max-width:640px) {
+        font-size: 11px;
+    }
+}
